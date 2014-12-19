@@ -18,8 +18,8 @@ node 'precise64.blinkbox.local' inherits basenode {
 node 'precise64.lan' inherits basenode {
 }
 node 'debby.blinkbox.local' {
-  include redis-master
+  include redis
 }
 node 'debslave.blinkbox.local' {
-  include redis-slave
+  include redis
 }
