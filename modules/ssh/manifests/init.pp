@@ -1,7 +1,8 @@
+#ssh service
 class ssh {
 file {'/etc/ssh/sshd_config':
-   ensure => file,
-   source => 'puppet:///modules/ssh/sshd_config', 
-   notify => Service['ssh'],
+  ensure => file,
+  source => 'puppet:///modules/ssh/sshd_config',
+  notify => Service['ssh'],
 }
 }
