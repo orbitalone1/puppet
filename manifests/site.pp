@@ -1,4 +1,6 @@
-import "nodes"
+#import "nodes"
+
+hiera_include('classes')
 
 # The filebucket option allows for file backups to the server
 filebucket { main: server => 'puppet' }

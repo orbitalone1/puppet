@@ -1,4 +1,5 @@
 ---
+classes: ntp
 ntp::restrict:
   -
 ntp::autoupdate: false
