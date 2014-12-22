@@ -5,7 +5,7 @@ node 'basenode' {
    include agentpuppetconf
    include ssh
    include services
-   include ntp
+  # include ntp
 
 }
 
@@ -13,13 +13,15 @@ node 'basenode' {
 #   include xxx
 #}
 
-node 'precise64.blinkbox.local' inherits basenode {
-}
-node 'precise64.lan' inherits basenode {
-}
-node 'debby.blinkbox.local' {
-  include redis
-}
-node 'debslave.blinkbox.local' {
-  include redis
+#node 'precise64.blinkbox.local' inherits basenode {
+#}
+#node 'precise64.lan' inherits basenode {
+#}
+#node 'debby.blinkbox.local' {
+#  include redis
+  #include ntp
+#}
+node 'debslave.blinkbox.local', 'debby.blinkbox.local', 'precise64.blinkbox.local' {
+#  include redis
+  include ntp
 }
